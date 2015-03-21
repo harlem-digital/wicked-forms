@@ -25,7 +25,7 @@ h2 {
 /* line 20, demo.scss */
 input {
   font-size: 100%;
-  vertical-align: baseline;
+  vertical-align: top;
 }
 
 /* line 25, demo.scss */
@@ -79,30 +79,34 @@ input {
 /* line 51, demo.scss */
 .form-control-textbox:focus ~ .form-control-label {
   opacity: 1;
-  -webkit-transform: translate(-115%, -50%);
-      -ms-transform: translate(-115%, -50%);
-          transform: translate(-115%, -50%);
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+/* line 57, demo.scss */
+.form-control-textbox[type="textarea"] {
+  min-height: 120px;
 }
 
-/* line 58, demo.scss */
+/* line 62, demo.scss */
 .form-control-label {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 3px;
+  right: 100%;
   z-index: 1;
   padding: 7px 15px;
   color: #fff;
   background: #333;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   border-radius: 4px;
   opacity: 0;
   white-space: nowrap;
   -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 74, demo.scss */
+/* line 78, demo.scss */
 .form-control-label:after {
   content: '';
   position: absolute;
