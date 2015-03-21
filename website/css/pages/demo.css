@@ -134,34 +134,44 @@ input[type="textarea"] {
   bottom: 0;
   margin: 0;
   padding: 0;
+  z-index: 5;
 }
-/* line 107, demo.scss */
+/* line 108, demo.scss */
 .form-control-choice ~ .form-control-label {
   display: block;
   padding-left: 20px;
 }
-/* line 111, demo.scss */
+/* line 112, demo.scss */
 .form-control-choice ~ .form-control-label .form-control-indicator {
   display: block;
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 3px;
   width: 15px;
   height: 15px;
   background: #ddd;
   border-radius: 50%;
 }
-/* line 125, demo.scss */
-.form-control-choice:checked ~ .form-control-label .form-control-indicator:after {
+/* line 122, demo.scss */
+.form-control-choice ~ .form-control-label .form-control-indicator:before {
   content: '';
   position: absolute;
+  width: 25%;
+  height: 25%;
   top: 50%;
-  left: 0;
+  left: 50%;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  -webkit-transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+          transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+/* line 143, demo.scss */
+.form-control-choice:checked ~ .form-control-label .form-control-indicator:before {
   width: 100%;
   height: 100%;
   background: #333;
-  border-radius: 50%;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
 }

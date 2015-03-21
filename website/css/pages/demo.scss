@@ -103,6 +103,7 @@ input {
 	bottom: 0;
 	margin: 0;
 	padding: 0;
+	z-index: 5;
 
 	~ .form-control-label {
 		display: block;
@@ -112,26 +113,37 @@ input {
 			display: block;
 			position: absolute;
 			left: 0;
-			top: 2px;
+			top: 3px;
 			width: 15px;
 			height: 15px;
 			background: #ddd;
 			border-radius: 50%;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				width: 25%;
+				height: 25%;
+				top: 50%;
+				left: 50%;
+				background: #fff;
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+
+				transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+							width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+							height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+			}
 		}
 	}
 
 	&:checked {
 		~ .form-control-label .form-control-indicator {
-			&:after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 0;
+			&:before {
 				width: 100%;
 				height: 100%;
 				background: #333;
-				border-radius: 50%;
-				transform: translate(0, -50%);
 			}
 		}
 	}
