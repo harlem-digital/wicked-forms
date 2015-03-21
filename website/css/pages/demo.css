@@ -1,9 +1,38 @@
 /* line 4, demo.scss */
 body {
   margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
 }
 
-/* line 8, demo.scss */
-div {
-  background-size: 100% auto;
+/* line 11, demo.scss */
+h1, h2 {
+  font-weight: normal;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* line 16, demo.scss */
+h1 {
+  font-size: 7em;
+}
+
+/* line 18, demo.scss */
+h2 {
+  font-size: 4em;
+}
+
+/* line 20, demo.scss */
+p {
+  font-size: 2em;
+}
+
+/* line 22, demo.scss */
+.section-intro {
+  text-align: center;
+}
+
+/* line 24, demo.scss */
+.form-control {
+  font-size: 1.5em;
 }

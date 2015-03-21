@@ -3,8 +3,22 @@
 
 body {
 	margin: 0;
+	padding: 0;
+	font-family: $open-sans;
+	font-size: 10px;
 }
 
-div {
-	@include background-scale(width);
+h1, h2 {
+	font-weight: normal;
+	font-family: $josefin;
 }
+
+h1 { font-size: 7em; }
+
+h2 { font-size: 4em; }
+
+p { font-size: 2em; }
+
+.section-intro { text-align: center; }
+
+.form-control { font-size: 1.5em; }
