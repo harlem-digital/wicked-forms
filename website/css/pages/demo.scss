@@ -19,7 +19,10 @@ h2 { font-size: 40px; }
 
 input {
 	font-size: 100%;
-	vertical-align: top;
+	line-height: normal;
+	&[type="textarea"] {
+		vertical-align: top;
+	}
 }
 
 .section-intro { text-align: center; }
@@ -31,18 +34,20 @@ input {
 	margin-bottom: 10px;
 }
 
-.form-control-textbox { font-size: 15px; }
+.form-control-textbox {
+	font-size: 15px;
+}
 
 .form-control-textbox {
 	display: block;
 	position: relative;
 	width: 100%;
-	padding: 10px 0;
-	text-indent: 20px;
+	padding: 10px 20px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	outline: 0;
 	z-index: 2;
+	box-sizing: border-box;
 	
 	&::placeholder { color: #ddd; }
 	&:focus {
@@ -56,6 +61,8 @@ input {
 
 	&[type="textarea"] {
 		min-height: 120px;
+		overflow: auto;
+		text-indent: 0;
 	}
 }
 

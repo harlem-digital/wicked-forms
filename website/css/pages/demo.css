@@ -25,15 +25,19 @@ h2 {
 /* line 20, demo.scss */
 input {
   font-size: 100%;
+  line-height: normal;
+}
+/* line 23, demo.scss */
+input[type="textarea"] {
   vertical-align: top;
 }
 
-/* line 25, demo.scss */
+/* line 28, demo.scss */
 .section-intro {
   text-align: center;
 }
 
-/* line 27, demo.scss */
+/* line 30, demo.scss */
 .form-control {
   display: block;
   font-size: 15px;
@@ -41,24 +45,24 @@ input {
   margin-bottom: 10px;
 }
 
-/* line 34, demo.scss */
+/* line 37, demo.scss */
 .form-control-textbox {
   font-size: 15px;
 }
 
-/* line 36, demo.scss */
+/* line 41, demo.scss */
 .form-control-textbox {
   display: block;
   position: relative;
   width: 100%;
-  padding: 10px 0;
-  text-indent: 20px;
+  padding: 10px 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: 0;
   z-index: 2;
+  box-sizing: border-box;
 }
-/* line 47, demo.scss */
+/* line 52, demo.scss */
 .form-control-textbox::-webkit-input-placeholder {
   color: #ddd;
 }
@@ -71,24 +75,26 @@ input {
 .form-control-textbox::placeholder {
   color: #ddd;
 }
-/* line 48, demo.scss */
+/* line 53, demo.scss */
 .form-control-textbox:focus {
   border-color: #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 51, demo.scss */
+/* line 56, demo.scss */
 .form-control-textbox:focus ~ .form-control-label {
   opacity: 1;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
           transform: translateX(-20px);
 }
-/* line 57, demo.scss */
+/* line 62, demo.scss */
 .form-control-textbox[type="textarea"] {
   min-height: 120px;
+  overflow: auto;
+  text-indent: 0;
 }
 
-/* line 62, demo.scss */
+/* line 69, demo.scss */
 .form-control-label {
   position: absolute;
   top: 3px;
@@ -106,7 +112,7 @@ input {
   -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 78, demo.scss */
+/* line 85, demo.scss */
 .form-control-label:after {
   content: '';
   position: absolute;
