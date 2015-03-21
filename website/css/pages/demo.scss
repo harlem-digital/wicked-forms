@@ -5,7 +5,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $open-sans;
-	font-size: 10px;
+	font-size: 20px;
 }
 
 h1, h2 {
@@ -13,12 +13,78 @@ h1, h2 {
 	font-family: $josefin;
 }
 
-h1 { font-size: 7em; }
+h1 { font-size: 70px; }
 
-h2 { font-size: 4em; }
+h2 { font-size: 40px; }
 
-p { font-size: 2em; }
+input {
+	font-size: 100%;
+	vertical-align: baseline;
+}
 
 .section-intro { text-align: center; }
 
-.form-control { font-size: 1.5em; }
+.form-control {
+	display: block;
+	font-size: 15px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.form-control-textbox { font-size: 15px; }
+
+.form-control-textbox {
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 10px 0;
+	text-indent: 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	outline: 0;
+	z-index: 2;
+	
+	&::placeholder { color: #ddd; }
+	&:focus {
+		border-color: #333;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+		~ .form-control-label {
+			opacity: 1;
+			transform: translate(-115%, -50%);
+		}
+	}
+}
+
+.form-control-label {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	padding: 7px 15px;
+	color: #fff;
+	background: #333;
+	transform: translate(0, -50%);
+	border-radius: 4px;
+	opacity: 0;
+	white-space: nowrap;
+	
+	transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+				transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-right: -7px;
+		width: 0;
+		height: 0;
+		border-left: 8px solid #333;
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+		transform: translate(0, -50%);
+	}
+}
+
+
+
