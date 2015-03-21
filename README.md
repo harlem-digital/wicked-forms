@@ -1,1 +1,3 @@
-# wicked-forms
+#Wicked Forms
+
+Making forms simple.
