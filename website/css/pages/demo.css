@@ -48,10 +48,6 @@ input[type="textarea"] {
 /* line 37, demo.scss */
 .form-control-textbox {
   font-size: 15px;
-}
-
-/* line 41, demo.scss */
-.form-control-textbox {
   display: block;
   position: relative;
   width: 100%;
@@ -62,7 +58,7 @@ input[type="textarea"] {
   z-index: 2;
   box-sizing: border-box;
 }
-/* line 52, demo.scss */
+/* line 49, demo.scss */
 .form-control-textbox::-webkit-input-placeholder {
   color: #ddd;
 }
@@ -75,27 +71,25 @@ input[type="textarea"] {
 .form-control-textbox::placeholder {
   color: #ddd;
 }
-/* line 53, demo.scss */
+/* line 50, demo.scss */
 .form-control-textbox:focus {
   border-color: #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 56, demo.scss */
+/* line 53, demo.scss */
 .form-control-textbox:focus ~ .form-control-label {
   opacity: 1;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
           transform: translateX(-20px);
 }
-/* line 62, demo.scss */
+/* line 59, demo.scss */
 .form-control-textbox[type="textarea"] {
   min-height: 120px;
   overflow: auto;
-  text-indent: 0;
 }
-
-/* line 69, demo.scss */
-.form-control-label {
+/* line 64, demo.scss */
+.form-control-textbox ~ .form-control-label {
   position: absolute;
   top: 3px;
   right: 100%;
@@ -112,8 +106,8 @@ input[type="textarea"] {
   -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 85, demo.scss */
-.form-control-label:after {
+/* line 80, demo.scss */
+.form-control-textbox ~ .form-control-label:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -124,6 +118,49 @@ input[type="textarea"] {
   border-left: 8px solid #333;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/* line 96, demo.scss */
+.form-control-choice {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+/* line 107, demo.scss */
+.form-control-choice ~ .form-control-label {
+  display: block;
+  padding-left: 20px;
+}
+/* line 111, demo.scss */
+.form-control-choice ~ .form-control-label .form-control-indicator {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  border-radius: 50%;
+}
+/* line 125, demo.scss */
+.form-control-choice:checked ~ .form-control-label .form-control-indicator:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  border-radius: 50%;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);

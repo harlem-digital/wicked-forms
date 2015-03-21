@@ -36,9 +36,6 @@ input {
 
 .form-control-textbox {
 	font-size: 15px;
-}
-
-.form-control-textbox {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -62,40 +59,81 @@ input {
 	&[type="textarea"] {
 		min-height: 120px;
 		overflow: auto;
-		text-indent: 0;
 	}
-}
 
-.form-control-label {
-	position: absolute;
-	top: 3px;
-	right: 100%;
-	z-index: 1;
-	padding: 7px 15px;
-	color: #fff;
-	background: #333;
-	transform: translateX(100%);
-	border-radius: 4px;
-	opacity: 0;
-	white-space: nowrap;
-	
-	transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
-				transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
-
-	&:after{
-		content: '';
+	~ .form-control-label {
 		position: absolute;
-		top: 50%;
-		right: 0;
-		margin-right: -7px;
-		width: 0;
-		height: 0;
-		border-left: 8px solid #333;
-		border-top: 8px solid transparent;
-		border-bottom: 8px solid transparent;
-		transform: translate(0, -50%);
+		top: 3px;
+		right: 100%;
+		z-index: 1;
+		padding: 7px 15px;
+		color: #fff;
+		background: #333;
+		transform: translateX(100%);
+		border-radius: 4px;
+		opacity: 0;
+		white-space: nowrap;
+		
+		transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+					transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-right: -7px;
+			width: 0;
+			height: 0;
+			border-left: 8px solid #333;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			transform: translate(0, -50%);
+		}
 	}
 }
 
+.form-control-choice {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
 
+	~ .form-control-label {
+		display: block;
+		padding-left: 20px;
+	
+		.form-control-indicator {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width: 15px;
+			height: 15px;
+			background: #ddd;
+			border-radius: 50%;
+		}
+	}
+
+	&:checked {
+		~ .form-control-label .form-control-indicator {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #333;
+				border-radius: 50%;
+				transform: translate(0, -50%);
+			}
+		}
+	}
+}
 
