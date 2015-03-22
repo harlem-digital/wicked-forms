@@ -183,3 +183,67 @@ input[type="textarea"] {
 .form-control-choice[type="checkbox"] ~ .form-control-label .form-control-indicator:before {
   border-radius: 4px;
 }
+
+/* line 160, demo.scss */
+.form-control-select {
+  font-size: 15px;
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  outline: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* line 177, demo.scss */
+.form-control-select:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+/* line 180, demo.scss */
+.form-control-select:focus ~ .form-control-label {
+  opacity: 1;
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+/* line 186, demo.scss */
+.form-control-select ~ .form-control-label {
+  position: absolute;
+  top: 3px;
+  right: 100%;
+  z-index: 1;
+  padding: 7px 15px;
+  color: #fff;
+  background: #333;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  border-radius: 4px;
+  opacity: 0;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+          transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+/* line 202, demo.scss */
+.form-control-select ~ .form-control-label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #333;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
