@@ -165,7 +165,7 @@ input[type="textarea"] {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
@@ -174,4 +174,12 @@ input[type="textarea"] {
   width: 100%;
   height: 100%;
   background: #333;
+}
+/* line 151, demo.scss */
+.form-control-choice[type="checkbox"] ~ .form-control-label .form-control-indicator {
+  border-radius: 4px;
+}
+/* line 154, demo.scss */
+.form-control-choice[type="checkbox"] ~ .form-control-label .form-control-indicator:before {
+  border-radius: 4px;
 }
