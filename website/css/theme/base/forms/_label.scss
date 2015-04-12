@@ -12,7 +12,7 @@ $form-label-background-color: #333 !default;
 	color: $text-color;
 }
 
-@mixin form-label-flyout(
+@mixin form-label-flyout (
 	$text-color: $form-label-flyout-text-color,
 	$background-color: $form-label-background-color
 ) {

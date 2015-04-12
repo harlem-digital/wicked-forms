@@ -32,3 +32,5 @@ h2 { font-size: 40px; }
 .form-control-selectbox { @include form-selectbox(); }
 
 .form-control-filebrowser { @include form-filebrowser(); }
+
+.form-control-button { @include form-button(); }

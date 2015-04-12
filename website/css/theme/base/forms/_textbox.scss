@@ -5,7 +5,7 @@
 $form-textbox-border-color: #ddd !default;
 $form-textbox-border-focus-color: #333 !default;
 
-@mixin form-textbox(
+@mixin form-textbox (
 	$border-color: $form-textbox-border-color,
 	$border-focus-color: $form-textbox-border-focus-color
 ) {
@@ -24,6 +24,7 @@ $form-textbox-border-focus-color: #333 !default;
 	&:focus {
 		border-color: $border-focus-color;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+		
 		~ .form-control-label {
 			opacity: 1;
 			transform: translateX(-20px);

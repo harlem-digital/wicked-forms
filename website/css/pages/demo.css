@@ -106,14 +106,14 @@ h2 {
   border-color: #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 27, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox:focus ~ .form-control-label {
   opacity: 1;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
           transform: translateX(-20px);
 }
-/* line 33, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
+/* line 34, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox[type="textarea"] {
   min-height: 120px;
   overflow: auto;
@@ -165,17 +165,17 @@ h2 {
   -webkit-transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 60, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
 .form-control-selector:checked ~ .form-control-label .form-control-indicator:before {
   width: 100%;
   height: 100%;
   background: #333;
 }
-/* line 68, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+/* line 66, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
 .form-control-selector[type="checkbox"] ~ .form-control-label .form-control-indicator {
   border-radius: 4px;
 }
-/* line 71, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
 .form-control-selector[type="checkbox"] ~ .form-control-label .form-control-indicator:before {
   border-radius: 4px;
 }
@@ -289,4 +289,23 @@ h2 {
   border: 1px solid #333;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+/* line 36, demo.scss */
+.form-control-button {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  font-size: inherit;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  border-radius: 4px;
+  background: #333;
+  box-sizing: border-box;
+  line-height: 17px;
+  vertical-align: top;
+  cursor: pointer;
 }

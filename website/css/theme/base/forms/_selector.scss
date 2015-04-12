@@ -6,7 +6,7 @@ $form-selector-center-color: #fff !default;
 $form-selector-background-color: #ddd !default;
 $form-selector-selected-background-color: #333 !default;
 
-@mixin form-selector(
+@mixin form-selector (
 	$center-color: $form-selector-center-color,
 	$background-color: $form-selector-background-color,
 	$background-selected-color: $form-selector-selected-background-color
@@ -56,20 +56,16 @@ $form-selector-selected-background-color: #333 !default;
 	}
 
 	&:checked {
-		~ .form-control-label .form-control-indicator {
-			&:before {
-				width: 100%;
-				height: 100%;
-				background: $background-selected-color;
-			}
+		~ .form-control-label .form-control-indicator:before {
+			width: 100%;
+			height: 100%;
+			background: $background-selected-color;
 		}
 	}
 
 	&[type="checkbox"] ~ .form-control-label .form-control-indicator {
 		border-radius: $form-border-radius;
 
-		&:before {
-			border-radius: $form-border-radius;
-		}
+		&:before { border-radius: $form-border-radius; }
 	}
 }

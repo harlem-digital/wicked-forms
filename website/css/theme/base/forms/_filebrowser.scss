@@ -8,7 +8,7 @@ $form-filebrowser-button-background-color: #333 !default;
 $form-filebrowser-border-color: #ddd !default;
 $form-filebrowser-border-focus-color: #333 !default;
 
-@mixin form-filebrowser(
+@mixin form-filebrowser (
 	$text-color: $form-filebrowser-text-color,
 	$button-text-color: $form-filebrowser-button-text-color,
 	$button-background-color: $form-filebrowser-button-background-color,
