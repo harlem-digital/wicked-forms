@@ -23,6 +23,10 @@ h2 { font-size: 40px; }
 	@include form-control();
 }
 
+.form-control-label {
+	@include form-label();
+}
+
 .form-control-textbox {
 	@include form-textbox();
 }

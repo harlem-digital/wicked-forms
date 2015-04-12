@@ -6,11 +6,15 @@
 // Configuration
 // -------------------
 
+$form-background-color: #fff;
+$form-placeholder-color: #ddd;
+
 // -------------------
 // Mixins
 // -------------------
 
 @import "control";
+@import "label";
 @import "textbox";
 @import "selector";
 @import "selectbox";
