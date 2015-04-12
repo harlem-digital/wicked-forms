@@ -23,21 +23,11 @@ h2 {
 }
 
 /* line 20, demo.scss */
-input {
-  font-size: 100%;
-  line-height: normal;
-}
-/* line 23, demo.scss */
-input[type="textarea"] {
-  vertical-align: top;
-}
-
-/* line 28, demo.scss */
 .section-intro {
   text-align: center;
 }
 
-/* line 30, demo.scss */
+/* line 22, demo.scss */
 .form-control {
   display: block;
   font-size: 15px;
@@ -45,9 +35,9 @@ input[type="textarea"] {
   margin-bottom: 10px;
 }
 
-/* line 37, demo.scss */
+/* line 26, demo.scss */
 .form-control-textbox {
-  font-size: 15px;
+  font-size: inherit;
   display: block;
   position: relative;
   width: 100%;
@@ -58,7 +48,7 @@ input[type="textarea"] {
   z-index: 2;
   box-sizing: border-box;
 }
-/* line 49, demo.scss */
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox::-webkit-input-placeholder {
   color: #ddd;
 }
@@ -71,24 +61,24 @@ input[type="textarea"] {
 .form-control-textbox::placeholder {
   color: #ddd;
 }
-/* line 50, demo.scss */
+/* line 18, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox:focus {
   border-color: #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 53, demo.scss */
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox:focus ~ .form-control-label {
   opacity: 1;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
           transform: translateX(-20px);
 }
-/* line 59, demo.scss */
+/* line 27, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox[type="textarea"] {
   min-height: 120px;
   overflow: auto;
 }
-/* line 64, demo.scss */
+/* line 32, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox ~ .form-control-label {
   position: absolute;
   top: 3px;
@@ -106,7 +96,7 @@ input[type="textarea"] {
   -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 80, demo.scss */
+/* line 48, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_textbox.scss */
 .form-control-textbox ~ .form-control-label:after {
   content: '';
   position: absolute;
@@ -123,8 +113,8 @@ input[type="textarea"] {
           transform: translate(0, -50%);
 }
 
-/* line 96, demo.scss */
-.form-control-choice {
+/* line 30, demo.scss */
+.form-control-selector {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -136,13 +126,13 @@ input[type="textarea"] {
   padding: 0;
   z-index: 5;
 }
-/* line 108, demo.scss */
-.form-control-choice ~ .form-control-label {
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector ~ .form-control-label {
   display: block;
   padding-left: 20px;
 }
-/* line 112, demo.scss */
-.form-control-choice ~ .form-control-label .form-control-indicator {
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector ~ .form-control-label .form-control-indicator {
   display: block;
   position: absolute;
   left: 0;
@@ -152,8 +142,8 @@ input[type="textarea"] {
   background: #ddd;
   border-radius: 50%;
 }
-/* line 122, demo.scss */
-.form-control-choice ~ .form-control-label .form-control-indicator:before {
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector ~ .form-control-label .form-control-indicator:before {
   content: '';
   position: absolute;
   width: 25%;
@@ -169,23 +159,23 @@ input[type="textarea"] {
   -webkit-transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 143, demo.scss */
-.form-control-choice:checked ~ .form-control-label .form-control-indicator:before {
+/* line 52, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector:checked ~ .form-control-label .form-control-indicator:before {
   width: 100%;
   height: 100%;
   background: #333;
 }
-/* line 151, demo.scss */
-.form-control-choice[type="checkbox"] ~ .form-control-label .form-control-indicator {
+/* line 60, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector[type="checkbox"] ~ .form-control-label .form-control-indicator {
   border-radius: 4px;
 }
-/* line 154, demo.scss */
-.form-control-choice[type="checkbox"] ~ .form-control-label .form-control-indicator:before {
+/* line 63, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selector.scss */
+.form-control-selector[type="checkbox"] ~ .form-control-label .form-control-indicator:before {
   border-radius: 4px;
 }
 
-/* line 160, demo.scss */
-.form-control-select {
+/* line 34, demo.scss */
+.form-control-selectbox {
   font-size: 15px;
   display: block;
   position: relative;
@@ -201,20 +191,20 @@ input[type="textarea"] {
   -moz-appearance: none;
   appearance: none;
 }
-/* line 177, demo.scss */
-.form-control-select:focus {
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selectbox.scss */
+.form-control-selectbox:focus {
   border-color: #333;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 180, demo.scss */
-.form-control-select:focus ~ .form-control-label {
+/* line 25, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selectbox.scss */
+.form-control-selectbox:focus ~ .form-control-label {
   opacity: 1;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
           transform: translateX(-20px);
 }
-/* line 186, demo.scss */
-.form-control-select ~ .form-control-label {
+/* line 31, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selectbox.scss */
+.form-control-selectbox ~ .form-control-label {
   position: absolute;
   top: 3px;
   right: 100%;
@@ -231,8 +221,8 @@ input[type="textarea"] {
   -webkit-transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), -webkit-transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
           transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
-/* line 202, demo.scss */
-.form-control-select ~ .form-control-label:after {
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_selectbox.scss */
+.form-control-selectbox ~ .form-control-label:after {
   content: '';
   position: absolute;
   top: 50%;

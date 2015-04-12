@@ -1,0 +1,62 @@
+// --------------------------------------
+// Textboxes
+// --------------------------------------
+
+@mixin form-textbox() {
+	font-size: inherit;
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	outline: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	
+	&::placeholder { color: #ddd; }
+	&:focus {
+		border-color: #333;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+		~ .form-control-label {
+			opacity: 1;
+			transform: translateX(-20px);
+		}
+	}
+
+	&[type="textarea"] {
+		min-height: 120px;
+		overflow: auto;
+	}
+
+	~ .form-control-label {
+		position: absolute;
+		top: 3px;
+		right: 100%;
+		z-index: 1;
+		padding: 7px 15px;
+		color: #fff;
+		background: #333;
+		transform: translateX(100%);
+		border-radius: 4px;
+		opacity: 0;
+		white-space: nowrap;
+		
+		transition: opacity 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+					transform 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-right: -7px;
+			width: 0;
+			height: 0;
+			border-left: 8px solid #333;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			transform: translate(0, -50%);
+		}
+	}	
+}

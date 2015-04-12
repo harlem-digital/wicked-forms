@@ -1,0 +1,67 @@
+// --------------------------------------
+// Selectors
+// --------------------------------------
+
+@mixin form-selector() {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 5;
+
+	~ .form-control-label {
+		display: block;
+		padding-left: 20px;
+	
+		.form-control-indicator {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 3px;
+			width: 15px;
+			height: 15px;
+			background: #ddd;
+			border-radius: 50%;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				width: 25%;
+				height: 25%;
+				top: 50%;
+				left: 50%;
+				background: #fff;
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 3;
+
+				transition: background 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+							width 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),
+							height 0.2s cubic-bezier(0.28, 0.11, 0.32, 1);
+			}
+		}
+	}
+
+	&:checked {
+		~ .form-control-label .form-control-indicator {
+			&:before {
+				width: 100%;
+				height: 100%;
+				background: #333;
+			}
+		}
+	}
+
+	&[type="checkbox"] ~ .form-control-label .form-control-indicator {
+		border-radius: 4px;
+
+		&:before {
+			border-radius: 4px;
+		}
+	}
+}
