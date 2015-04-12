@@ -4,7 +4,7 @@
 
 @mixin form-control() {
 	display: block;
-	font-size: 15px;
+	font-size: $form-font-size;
 	position: relative;
 	margin-bottom: 10px;
 }

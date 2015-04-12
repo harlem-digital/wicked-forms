@@ -1,3 +1,59 @@
 // --------------------------------------
 // File Browser
 // --------------------------------------
+
+$form-filebrowser-text-color: #333 !default;
+$form-filebrowser-button-text-color: #fff !default;
+$form-filebrowser-button-background-color: #333 !default;
+$form-filebrowser-border-color: #ddd !default;
+$form-filebrowser-border-focus-color: #333 !default;
+
+@mixin form-filebrowser(
+	$text-color: $form-filebrowser-text-color,
+	$button-text-color: $form-filebrowser-button-text-color,
+	$button-background-color: $form-filebrowser-button-background-color,
+	$border-color: $form-filebrowser-border-color,
+	$border-focus-color: $form-filebrowser-border-focus-color
+) {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 5;
+	cursor: pointer;
+
+	&:focus ~ .form-control-label { border-color: $border-focus-color; }
+
+	~ .form-control-label {
+		font-size: inherit;
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 10px 20px;
+		color: $text-color;
+		border: 1px solid $border-color;
+		border-radius: $form-border-radius;
+		outline: 0;
+		z-index: 2;
+		box-sizing: border-box;
+
+		&:before {
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			bottom: -1px;
+			color: $button-text-color;
+			content: 'Browse';
+			padding: 10px 20px;
+			background: $button-background-color;
+			border: 1px solid $border-focus-color;
+			border-top-right-radius: $form-border-radius;
+			border-bottom-right-radius: $form-border-radius;
+		}
+	}
+}

@@ -19,26 +19,16 @@ h2 { font-size: 40px; }
 
 .section-intro { text-align: center; }
 
-.form-control {
-	@include form-control();
-}
+.form-control { @include form-control(); }
 
-.form-control-label {
-	@include form-label();
-}
+.form-control-label { @include form-label(); }
 
-.has-flyout {
-	@include form-label-flyout();
-}
+.has-flyout { @include form-label-flyout(); }
 
-.form-control-textbox {
-	@include form-textbox();
-}
+.form-control-textbox { @include form-textbox(); }
 
-.form-control-selector {
-	@include form-selector();
-}
+.form-control-selector { @include form-selector(); }
 
-.form-control-selectbox {
-	@include form-selectbox();
-}
+.form-control-selectbox { @include form-selectbox(); }
+
+.form-control-filebrowser { @include form-filebrowser(); }
