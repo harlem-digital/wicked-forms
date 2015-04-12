@@ -2,7 +2,15 @@
 // Selectors
 // --------------------------------------
 
-@mixin form-selector() {
+$form-selector-center-color: #fff !default;
+$form-selector-background-color: #ddd !default;
+$form-selector-selected-background-color: #333 !default;
+
+@mixin form-selector(
+	$center-color: $form-selector-center-color,
+	$background-color: $form-selector-background-color,
+	$background-selected-color: $form-selector-selected-background-color
+) {
 	position: absolute;
 	opacity: 0;
 	width: 100%;
@@ -25,7 +33,7 @@
 			top: 3px;
 			width: 15px;
 			height: 15px;
-			background: #ddd;
+			background: $background-color;
 			border-radius: 50%;
 			
 			&:before {
@@ -35,7 +43,7 @@
 				height: 25%;
 				top: 50%;
 				left: 50%;
-				background: #fff;
+				background: $center-color;
 				border-radius: 50%;
 				transform: translate(-50%, -50%);
 				z-index: 3;
@@ -52,16 +60,16 @@
 			&:before {
 				width: 100%;
 				height: 100%;
-				background: #333;
+				background: $background-selected-color;
 			}
 		}
 	}
 
 	&[type="checkbox"] ~ .form-control-label .form-control-indicator {
-		border-radius: 4px;
+		border-radius: $form-border-radius;
 
 		&:before {
-			border-radius: 4px;
+			border-radius: $form-border-radius;
 		}
 	}
 }

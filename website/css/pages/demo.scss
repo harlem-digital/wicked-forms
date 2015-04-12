@@ -27,6 +27,10 @@ h2 { font-size: 40px; }
 	@include form-label();
 }
 
+.has-flyout {
+	@include form-label-flyout();
+}
+
 .form-control-textbox {
 	@include form-textbox();
 }

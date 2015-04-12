@@ -2,19 +2,30 @@
 // Labels
 // --------------------------------------
 
-$form-label-text-color: #fff;
-$form-label-background-color: #333;
+$form-label-text-color: #333 !default;
+$form-label-flyout-text-color: #fff !default;
+$form-label-background-color: #333 !default;
 
-@mixin form-label() {
+@mixin form-label (
+	$text-color: $form-label-text-color
+) {
+	color: $text-color;
+}
+
+@mixin form-label-flyout(
+	$text-color: $form-label-flyout-text-color,
+	$background-color: $form-label-background-color
+) {
+	@include form-label($text-color);
+
 	position: absolute;
 	top: 3px;
 	right: 100%;
 	z-index: 1;
 	padding: 7px 15px;
-	color: $form-label-text-color;
-	background: $form-label-background-color;
+	background: $background-color;
 	transform: translateX(100%);
-	border-radius: 4px;
+	border-radius: $form-border-radius;
 	opacity: 0;
 	white-space: nowrap;
 	
@@ -29,7 +40,7 @@ $form-label-background-color: #333;
 		margin-right: -7px;
 		width: 0;
 		height: 0;
-		border-left: 8px solid $form-label-background-color;
+		border-left: 8px solid $background-color;
 		border-top: 8px solid transparent;
 		border-bottom: 8px solid transparent;
 		transform: translate(0, -50%);
