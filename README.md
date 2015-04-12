@@ -1,3 +1,3 @@
 #Wicked Forms
 
-Making forms simple.
+Making forms simple because they suck.
