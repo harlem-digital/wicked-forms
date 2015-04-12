@@ -309,3 +309,60 @@ h2 {
   vertical-align: top;
   cursor: pointer;
 }
+
+/* line 38, demo.scss */
+.form-control-progress {
+  font-size: inherit;
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 15px 30px;
+  border-radius: 4px;
+  outline: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background: #ddd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/websites/whoiskenjackson/github/wickedforms/website/css/theme/base/forms/_progress.scss */
+.form-control-progress ~ .form-control-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: #333;
+  z-index: 5;
+  color: #fff;
+  line-height: 30px;
+  font-size: inherit;
+  text-indent: 20px;
+  overflow: visible;
+}
+
+/* line 40, demo.scss */
+.progress-0 {
+  width: 0%;
+}
+
+/* line 42, demo.scss */
+.progress-25 {
+  width: 25%;
+}
+
+/* line 44, demo.scss */
+.progress-50 {
+  width: 50%;
+}
+
+/* line 46, demo.scss */
+.progress-75 {
+  width: 75%;
+}
+
+/* line 48, demo.scss */
+.progress-100 {
+  width: 100%;
+}

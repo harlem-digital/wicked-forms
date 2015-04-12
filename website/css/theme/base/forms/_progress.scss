@@ -1,0 +1,43 @@
+// --------------------------------------
+// Progress
+// --------------------------------------
+
+$form-progress-text-color: #fff !default;
+$form-progress-progress-color: #333 !default;
+$form-progress-background-color: #ddd !default;
+
+@mixin form-progress (
+	$text-color: $form-progress-text-color,
+	$progress-color: $form-progress-progress-color,
+	$background-color: $form-progress-background-color
+) {
+	font-size: inherit;
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 15px 30px;
+	border-radius: $form-border-radius;
+	outline: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	background: $background-color;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	~ .form-control-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: $form-border-radius;
+		background: $progress-color;
+		z-index: 5;
+		color: $text-color;
+		line-height: 30px;
+		font-size: inherit;
+		text-indent: 20px;
+		overflow: visible;
+	}
+}
